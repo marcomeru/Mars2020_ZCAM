@@ -1,4 +1,4 @@
-# Mars2020_ZCAM
+# Mars2020 ZCAM Repository
 
 Welcome!
 
