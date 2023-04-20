@@ -1,4 +1,4 @@
-# Mars2020 ZCAM Repository
+# Mars2020 ZCAM Calibration Target Repository
 
 Welcome!
 
