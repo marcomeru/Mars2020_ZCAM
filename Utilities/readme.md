@@ -4,7 +4,7 @@ I wrote the few routines in this folder because I really needed them every now a
 
 ## One term linear fit
 
-IDL is provided with the function <code>linfit</i> which computes the linear fit between two arrays, but with two terms (one multiplicative and one additive). What if I want to make a fit with only one coefficient? 
+IDL is provided with the function <code>linfit</code> which computes the linear fit between two arrays, but with two terms (one multiplicative and one additive). What if I want to make a fit with only one coefficient? 
 
 Given two arrays of numerical data with the same number of elements (plus, optionally, a third array of the uncertainties on the second array), this routine computes a linear fit between the two arrays with only one multiplicative factor (in the form y = x * A), such that the fit passes by the origin. The routine returns the slope of the fit and its associated uncertainty. 
 
