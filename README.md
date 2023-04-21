@@ -8,7 +8,7 @@ For a better understanding of the nomenclature and how the reflectance calibrati
 The files are basically organized in this way:
 - <i>reflectance_model</i>: this directory contains the codes that are used upon calibration to extract the reference values of reflectance at any wavelength and under any illumination geometry. In the calibration pipeline of ZCAM, these values are plotted against the corresponding observed radiances, from which the radiometric coefficients are computed.
 - <i>database_creation</i>: this directory contains two routines that search for the Radiometric Coefficient files (RC files) recursively, open them one by one, and store all their data in a structure, so that the data are easily accessible.
-- <i>RC_data_analysis</i>: this directory contains several codes used to extract a lot of different results and make plots using the data from the RC file database structure.
+- <i>RC_data_analysis</i> (work in progress): this directory contains several codes used to extract a lot of different results and make plots using the data from the RC file database structure.
 - <i>Utilities</i>: this directory contains a few routines that I wrote to do simple operations that I didn't find in the bigger libraries.
 
 <b>NB</b>: All the codes are written in IDL (Interactive Data Language), a programming language used mainly in astronomy. For more information, see check <a href="https://www.l3harrisgeospatial.com/Software-Technology/IDL">this link</a>. In particular, the codes rely on libraries by NASA, the Mastcam-Z team and IDL Coyote.<br>
