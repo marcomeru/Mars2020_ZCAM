@@ -2,7 +2,7 @@
 
 I wrote the few routines in this folder because I really needed them every now and then, and I didn't find them in any of the large libraries. They are described below.
 
-## One term linear fit
+## One term linear fit (<i>oneterm_linfit.pro</i>)
 
 IDL is provided with the function <code>linfit</code> which computes the linear fit between two arrays, but with two terms (one multiplicative and one additive). What if I want to make a fit with only one coefficient? 
 
@@ -16,4 +16,24 @@ result = oneterm_linfit, x_array, y_array, y_errors
 ```
 where the <code>y_errors</code> parameter can be dropped if not available. The <code>result</code> parameter is an array of two elements, that are the slope of the fit and its uncertainty.
 
-## 
+## Weighted average (<i>weighted_avg.pro</i>)
+
+Given one array of numerical values and a similar one containing the associated uncertainties, this routine computes the weighted average and its uncertainty. Both arrays must have at least one element and must have the same length.<br>
+The syntax is:
+```
+print, weighted_avg, x_val, x_err
+```
+
+## Print decimal digits (<i>print_digits.pro</i>)
+
+This simple routine receives one floating-point number N and one integer k, and rounds N to the k-th decimal digit. For example, if N has 10 decimal digits and k=6, the result will have 6 decimal digits.<br>
+For example:
+```
+N = 3.1928674605
+k = 4
+print, print_digits, N, k
+```
+will yield:
+```
+3.1929
+```
