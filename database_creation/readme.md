@@ -6,7 +6,7 @@ The file <i>cal_mars2020_struct.pro</i> is a routine that receives a list of RC 
 
 The file <i>make_ct_database.pro</i> is the main routine that is called by the user to create the structure. The routine can receive a path or a sol range in input, and it searches recursively for all the RC files inside that path. The list of RC files is passed to <i>cal_mars2020_struct.pro</i>, and the final structure is returned to the user.
 
-The RC files are plain text files obtained as second order products of the calibration targets images acquired by Mastcam-Z. They will be public soon through the Planetary Data System of NASA.
+The RC files are plain text files obtained as second order products of the calibration targets images acquired by Mastcam-Z. The images are already public, while the RC files will be public soon through the Planetary Data System of NASA.
 
 ## How to create the database
 
