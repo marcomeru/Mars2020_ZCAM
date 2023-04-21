@@ -39,3 +39,9 @@ Eventually, the structure can be handled as a normal IDL structure, and/or be sa
 ```
 SAVE, result, FILENAME="savefile.sav"
 ```
+
+and it can be loaded in any session of IDL by running the command:
+
+```
+RESTORE, "savefile.sav"
+```
