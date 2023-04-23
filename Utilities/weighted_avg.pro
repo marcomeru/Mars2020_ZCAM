@@ -1,8 +1,24 @@
 function weighted_avg, x_vec, e_vec
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; COMPUTE THE WEIGHTED AVERAGE OF AN ARRAY
 ;
-; Very simple routines that receives an array of data and one of 
-; uncertainties, and computes the weighted average and weighted error.
+; Marco Merusi, University of Copenhagen, November 2021
+;
+; DESCRIPTION
+; Very simple routine that receives an array of data and one of 
+; associated uncertainties, and computes the weighted average and weighted error.
+; 
+; SYNTAX
+; result = WEIGHTED_AVG(x_val, x_err)
+; 
+; INPUT
+; - x_val: (array) array of values.
+; - x_err: (array) array of associated uncertainties.
+; 
+; x_val and x_err must have the same length!
+; 
+; OUTPUT
+; - array containing two values: the weighted average and the weighted error.
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -42,39 +58,5 @@ x_avg = sum1 / sum2 ; weighted average
 e_avg = sqrt(1 / sum2) ; weighted uncertainty
 
 return, [x_avg, e_avg] ; return!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end
