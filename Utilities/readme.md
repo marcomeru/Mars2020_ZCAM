@@ -12,28 +12,41 @@ The two (or three) arrays, x and y, must have the same length and at least 2 ele
 
 The syntax is:
 ```
-result = oneterm_linfit, x_array, y_array, y_errors
+result = oneterm_linfit(x_array, y_array, Y_ERRORS= y_err)
 ```
 For example:
 ```
-x_array = [ 0.0319, 0.0364, 0.0912, 0.0912, 0.0220 ]
-y_array = [ 0.1986, 0.2124, 0.8113, 0.7896, 0.0838 ]
-y_errors = [ 0.0010, 0.0009, 0.0018, 0.0016, 0.0009 ]
-print, oneterm_linfit, x_array, y_array, y_errors
-
+x_array = [ 0.1986, 0.2124, 0.8113, 0.7896, 0.0838 ]
+y_array = [ 0.0319, 0.0364, 0.0912, 0.0912, 0.0220 ]
+y_err = [ 0.0010, 0.0009, 0.0018, 0.0016, 0.0009 ]
+print, oneterm_linfit(x_array, y_array, Y_ERRORS = y_err)
 ```
+will yield:
+```
+0.125563  1.43248e-05
+```
+The output is an array of two elements, that are the slope of the fit and its uncertainty, respectively. The parameter <code>Y_ERRORS</code> can be dropped if not available.
 
-
-
-where the <code>y_errors</code> parameter can be dropped if not available. The <code>result</code> parameter is an array of two elements, that are the slope of the fit and its uncertainty.
 
 ## Weighted average (<i>weighted_avg.pro</i>)
 
 Given one array of numerical values and a similar one containing the associated uncertainties, this routine computes the weighted average and its uncertainty. Both arrays must have at least one element and must have the same length.<br>
 The syntax is:
 ```
-print, weighted_avg, x_val, x_err
+print, weighted_avg(x_val, x_err)
 ```
+For example:
+```
+x_val = [ 0.1986, 0.2124, 0.8113, 0.7896, 0.0838 ]
+x_err = [ 0.0010, 0.0009, 0.0018, 0.0016, 0.0009 ]
+print, weighted_avg(x_val, x_err)
+```
+will yield:
+```
+0.269436  0.000489796
+```
+The output is an array of two elements, that are the weighted average and its weighted uncertainty, respectively. 
+
 
 ## Print decimal digits (<i>print_digits.pro</i>)
 
@@ -42,7 +55,7 @@ For example:
 ```
 N = 3.1928674605
 k = 4
-print, print_digits, N, k
+print, print_digits(N, k)
 ```
 will yield:
 ```
