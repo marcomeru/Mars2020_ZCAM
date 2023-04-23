@@ -51,6 +51,7 @@ refl = [] ; this array will contain the resulting reference reflectances
 foreach f, filters do refl = [ refl, refl_fac_filter("g", 18, 134, 58, f) ]
 plot, wavelength, refl, psym = 5, yrange = [0,1], xtitle = "Wavelength [nm]", ytitle = "Reflectance factor"
 ```
-The result is shown below.<br>
+The result is shown below in a low-resolution quicklook version. It can be plotted in a better-looking and fancy way, for example by using the graphic libraries by IDL Coyote.<br>
+
 <img width="723" alt="Screenshot 2023-04-23 at 17 44 37" src="https://user-images.githubusercontent.com/74593667/233849873-682b2a14-c940-40a4-84e4-4fa15cbf9b69.png">
 
