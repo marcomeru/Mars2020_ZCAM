@@ -43,5 +43,14 @@ which yields:
 0.77102798
 0.75846178
 ```
-
+Just to give a visual example, we can plot these values against their corresponding wavelengths:
+```
+filters = [ "L6", "L5", "L4", "L3", "L2", "L1", "R1", "R2", "R3", "R4", "R5", "R6" ]
+wavelength = [441, 529, 605, 687, 754, 801, 801, 866, 910, 940, 979, 1012] ; in nanometers
+refl = [] ; this array will contain the resulting reference reflectances
+foreach f, filters do refl = [ refl, refl_fac_filter("g", 18, 134, 58, f) ]
+plot, wavelength, refl, psym = 5, yrange = [0,1], xtitle = "Wavelength [nm]", ytitle = "Reflectance factor"
+```
+The result is shown below.
+<img width="723" alt="Screenshot 2023-04-23 at 17 44 37" src="https://user-images.githubusercontent.com/74593667/233849873-682b2a14-c940-40a4-84e4-4fa15cbf9b69.png">
 
