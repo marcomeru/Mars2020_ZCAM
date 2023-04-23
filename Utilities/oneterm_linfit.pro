@@ -11,7 +11,7 @@ function oneterm_linfit, x, y, Y_ERRORS = yerr
 ; the chi_squared of the fit). The function returns this slope.
 ; 
 ; SYNTAX
-; result = oneterm_linfit, X, Y [, Y_ERRORS=YERR]
+; result = oneterm_linfit(x, y [, Y_ERRORS=yerr])
 ; 
 ; INPUT
 ; - x: (array) first array, at least 2 elements.
@@ -22,7 +22,7 @@ function oneterm_linfit, x, y, Y_ERRORS = yerr
 ; x, y and yerr must have the same length!
 ; 
 ; OUTPUT
-; - slope: (float) slope of the 1-term linear fit between x and y
+; - array containing the value of the slope of the fit and its associated error.
 ; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -85,6 +85,5 @@ endif else begin ; If yerr was not given, do the same computation but without ye
   slerr = sqrt(tmp6/(nx-1)) * sqrt(tmp5) / tmp5
   return, [ slope , slerr ]
 endelse ; In both cases, return the slope and error
-
 
 end
