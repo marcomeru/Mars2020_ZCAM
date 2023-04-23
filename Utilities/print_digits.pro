@@ -12,7 +12,7 @@ function print_digits, N, k
 ; which is the initial number with k decimal digits.
 ; 
 ; SYNTAX
-; result = print_digits(num, dec)
+; result = print_digits(N, k)
 ; 
 ; INPUT
 ; - N: (float) number to 'cut'
